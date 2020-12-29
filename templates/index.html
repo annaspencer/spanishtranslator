@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} Feedback {% endblock %}
+
+{% block content %}
+<h1>Study Spanish Vocabulary</h1>
+<p>Add your list of Vocabulary words</p>
+<p>Create a Study Sheet</p>   
+<p>Check your verb conjugations with Webster's English-Spanish Dictionary</p> 
+<p>Listen to pronounciation</p>  
+
+
+
+<p>
+    Try it now!
+    <form action="/translate">
+        <div class="form-group">
+            <label for="translator">Webster's Spanish-English Dictionary Translator</label>
+            <input type="text" class="form-control" id="translator" aria-describedby="translator" name="translator" placeholder="Enter Word">
+            <small id="translator" class="form-text text-muted">Submit a word in English or Spanish to be translated.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>    
+</p>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %} Feedback {% endblock %}
+
+{% block content %}
+<h1>Welcome to Your Spanish Vocabulary Study Guide</h1>
+
+
+  
+ 
+
+ 
+    
+
+ <h3>Your Vocabulary Lists:</h3>
+  
+ <p>*generate lists here*</p>
+
+ <ul>
+    {% for list in user.lists %}
+
+    <li>
+      <p>{{ user.lists.title }}</p>
+      {% endfor %}
+      <small>{% for word in user.lists.title%}</small>
+      <li>
+        {{ user.lists.title.words.word }}
+        <small>{{ user.lists.title.words.translation}}</small>
+      </li>
+    </li>
+{% endfor %}
+ {{user.lists}}
+ {{user.lists[4].words}}
+
+ <a href="/users/{{ user.username }}/addvocab"><h3>Create a new list!</h3></a>
+
+
+ <h3>Edit or Delete a list</h3>
+  
+
+
+{% endblock %}
